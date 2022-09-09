@@ -14,7 +14,13 @@
       <li>
         <router-link class="text-red-600 underline" to="/simple">
           lien vers
-          <code class="font-mono">/src/pages/simple.vue</code>
+          <code class="font-mono">la liste simple</code>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/liste">
+          lien vers
+          <code class="font-mono">la liste des maisons</code>
         </router-link>
       </li>
     </ul>
