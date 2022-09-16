@@ -47,6 +47,7 @@ export default {
             default: "2821 Lake Sevilla, Palm Harbor, TX",
         
     },
+    bed: Number,
     components: { bed, bath, dimension, heart }
 }
 }
