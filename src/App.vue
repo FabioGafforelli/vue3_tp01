@@ -23,6 +23,12 @@
           <code class="font-mono">la liste des maisons</code>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/edit/new">
+          lien vers
+          <code class="font-mono">lien vers le formulaire</code>
+        </router-link>
+      </li>
     </ul>
   </nav>
 
