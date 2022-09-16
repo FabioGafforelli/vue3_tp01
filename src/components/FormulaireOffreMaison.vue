@@ -25,6 +25,7 @@ import Card from '@/components/Card.vue'
            <FormKit name="titre" label="Nom" />
            <FormKit name="price" label="Prix" type="number" />
            <FormKit name="nbrSDB" label="Nombre de salle de bain" type="number" />
+           <FormKit name="lieu" label="Adresse" />
            <FormKit name="favori" label="Mettre en valeur"
           type="checkbox" wrapper-class="flex" :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
  />
