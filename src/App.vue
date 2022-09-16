@@ -22,6 +22,12 @@
           lien vers
           <code class="font-mono">la liste des maisons</code>
         </router-link>
+        <li>
+          <router-link class="text-red-600 underline" to="/listeFetch">
+          lien vers
+          <code class="font-mono">liste fetch</code>
+        </router-link>
+        </li>
       </li>
       <li>
         <router-link class="text-red-600 underline" to="/edit/new">
