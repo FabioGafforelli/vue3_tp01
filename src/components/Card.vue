@@ -34,13 +34,14 @@ export default {
         },
         titre: {
             type: String,
+            default: "Beverly Springfield",
             required:true
         },
         image: String,
         nbrSDB: Number,
         lieu: {
             type: String,
-            default: 2821,
+            default: "2821 Lake Sevilla, Palm Harbor, TX",
         
     },
     components: { bed, bath, dimension, heart }
