@@ -1,0 +1,14 @@
+[
+    {
+        "nom": "Maison 1",
+        "price": "150.000",
+        "image": "/public/maison1.jpg",
+        "nbrSDB": "3"
+    },
+    {
+        "nom": "Maison 2",
+        "price": "312.999",
+        "image": "/public/maison1.jpg",
+        "nbrSDB": "5"
+    }
+]

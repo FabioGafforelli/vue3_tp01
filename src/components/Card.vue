@@ -1,6 +1,6 @@
 <template>
     <figure>
-        <img class="rounded-t-lg" :src="image" alt="">
+        <img class="rounded-t-lg" :src="image" alt="/public/maison1.jpg">
         <figcaption class="flex flex-col relative px-5 py-7 border-2 border-t-0 rounded-b-lg">
             <h3 class="text-2xl text-gray-900">{{titre}}</h3>
             <address class="not-italic text-gray-500">{{ lieu }}</address>
@@ -21,7 +21,7 @@
     </figure>
 </template>
 
-<script>
+<script lang="ts">
 import bed from "./icones/Bed.vue"
 import bath from "./icones/Bath.vue"
 import dimension from "./icones/Dimension.vue"
@@ -38,9 +38,12 @@ export default {
         },
         image: String,
         nbrSDB: Number,
-        lieu: String,
+        lieu: {
+            type: String,
+            default: 2821,
+        
     },
     components: { bed, bath, dimension, heart }
 }
-
+}
 </script>
