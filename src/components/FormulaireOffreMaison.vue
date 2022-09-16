@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { ref } from "@vue/reactivity"; 
 import Card from '@/components/Card.vue'
 // On fait une variable réactive qui réference les données
@@ -16,11 +15,20 @@ import Card from '@/components/Card.vue'
         </div>
      <div class="p-2">
         <!-- On passe la "ref" à FormKit -->
-           <FormKit name="nom" label="Nom" />
-           <FormKit name="prix" label="Prix" type="number" />
+        <FormKit type="form" :submit-attrs="{ classes: { input: 'bg-indigo-300 p-1 rounded' } }" :config="{
+ classes: {
+ input: 'p-1 rounded border-gray-300 shadow-sm border',
+ label: 'text-gray-600',
+ },
+ }" v-model="maison">
+            
+           <FormKit name="titre" label="Nom" />
+           <FormKit name="price" label="Prix" type="number" />
            <FormKit name="nbrSDB" label="Nombre de salle de bain" type="number" />
            <FormKit name="favori" label="Mettre en valeur"
-          type="checkbox" />
+          type="checkbox" wrapper-class="flex" :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
+ />
+          
         </FormKit>
      </div>
     </div>

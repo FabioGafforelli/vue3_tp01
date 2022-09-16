@@ -37,7 +37,10 @@ export default {
             default: "Beverly Springfield",
             required:true
         },
-        image: String,
+        image: {
+            type: String,
+            default:"/public/maison1.jpg"
+        },
         nbrSDB: Number,
         lieu: {
             type: String,
