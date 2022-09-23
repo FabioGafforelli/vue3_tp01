@@ -32,7 +32,7 @@
       <li>
         <router-link class="text-red-600 underline" to="/edit/new">
           lien vers
-          <code class="font-mono">lien vers le formulaire</code>
+          <code class="font-mono">le formulaire</code>
         </router-link>
       </li>
     </ul>
