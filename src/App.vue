@@ -41,6 +41,11 @@
           <code class="font-mono">liste-supabase</code>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/login-logout">
+          Login/logout
+        </router-link>
+      </li>
     </ul>
   </nav>
 
