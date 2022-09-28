@@ -2,53 +2,40 @@
     <figure>
         <img class="rounded-t-lg" :src="image" alt="/public/maison1.jpg">
         <figcaption class="flex flex-col relative px-5 py-7 border-2 border-t-0 rounded-b-lg">
-            <h3 class="text-2xl text-gray-900">{{titre}}</h3>
+            <h3 class="text-2xl text-gray-900">{{ titre }}</h3>
             <address class="not-italic text-gray-500">{{ lieu }}</address>
             <div class="order-first flex items-center">
-                <div class="text-2xl text-indigo-500">${{ price.toLocaleString("en-US") }}</div>
+                <div class="text-2xl text-indigo-500">${{ price }}</div>
                 <div class="text-gray-500 ">/months</div>
             </div>
             <hr class="border-indigo-100 border-t-2 my-2"/>
             <div class="flex justify-between text-sm">
-                <div><bed class="inline-block align-top"/>4 Beds </div>
+                <div><bed class="inline-block align-top"/> {{nbrChambres}} </div>
                 <div><bath class="inline-block align-top"/> {{ nbrSDB }} Bathrooms </div>
-                <div><dimension class="inline-block align-top"/> 6x7.5 m² </div>
-            </div>
+                <div><dimension class="inline-block align-top"/> {{surface}} m² </div>
             <div class="grid place-items-center w-12 h-12 border-2 border-indigo-100 rounded-full absolute top-7 right-5">
                 <heart :class="{'fill-indigo-500': favoris}"/>
+            </div>
             </div>
         </figcaption>
     </figure>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import bed from "./icones/Bed.vue"
 import bath from "./icones/Bath.vue"
 import dimension from "./icones/Dimension.vue"
 import heart from "./icones/Heart.vue"
-export default {
-    props: {
-        price: {
-            type: Number,
-            default: 2700,
-        },
-        titre: {
-            type: String,
-            default: "Beverly Springfield",
-            required:true
-        },
-        image: {
-            type: String,
-            default:"/public/maison1.jpg"
-        },
-        nbrSDB: Number,
-        lieu: {
-            type: String,
-            default: "2821 Lake Sevilla, Palm Harbor, TX",
-        
-    },
-    bed: Number,
-    components: { bed, bath, dimension, heart }
-}
-}
+
+defineProps({
+    titre: {type:String, default:'Beverly Springifeld'},
+    lieu: {type:String, default:'Pontarlier' },
+    image: {type:String, default:'./public/maison1.jpg'},
+    price: {type:Number, default:'250'},
+    nbrChambres: {type:Number, default:'3'},
+    nbrSDB: {type:Number, default:'2'},
+    surface: {type:Number, default:'175 m²'},
+    favoris: {type:Boolean, default:'False'},
+})
+
 </script>
