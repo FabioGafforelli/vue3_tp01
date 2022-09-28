@@ -2,14 +2,14 @@
     {
         "titre": "Maison 1",
         "price": "2700",
-        "image": "/public/maison1.jpg",
+        "image": "./maison1.jpg",
         "nbrSDB": "3",
         "lieu" : "2821 Lake Sevilla, Palm Harbor, TX"
     },
     {
         "titre": "Maison 2",
         "price": "3000",
-        "image": "/public/maison2.jpg",
+        "image": "./maison2.jpg",
         "nbrSDB": "5",
         "lieu" : "2821 Lake Sevilla, Palm Harbor, TX"
     }
