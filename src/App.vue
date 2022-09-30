@@ -46,6 +46,16 @@
           Login/logout
         </router-link>
       </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/edit/new">
+          Nouvelle maison
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/edit/[id]">
+          Editer la maison
+        </router-link>
+      </li>
     </ul>
   </nav>
 
@@ -57,4 +67,5 @@
 
 <script setup lang="ts">
 import { Bars3Icon } from '@heroicons/vue/20/solid'
+import { supabase } from './supabase';
 </script>

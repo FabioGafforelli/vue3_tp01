@@ -1,9 +1,9 @@
 <template>
     <figure>
-        <img class="rounded-t-lg" :src="image" alt="/public/maison1.jpg">
+        <img class="rounded-t-lg" :src="image" alt="">
         <figcaption class="flex flex-col relative px-5 py-7 border-2 border-t-0 rounded-b-lg">
             <h3 class="text-2xl text-gray-900">{{ titre }}</h3>
-            <address class="not-italic text-gray-500">{{ lieu }}</address>
+            <address class="not-italic text-gray-500">{{ adresse }}</address>
             <div class="order-first flex items-center">
                 <div class="text-2xl text-indigo-500">${{ price }}</div>
                 <div class="text-gray-500 ">/months</div>
@@ -29,7 +29,7 @@ import heart from "./icones/Heart.vue"
 
 defineProps({
     titre: {type:String, default:'Beverly Springifeld'},
-    lieu: {type:String, default:'Pontarlier' },
+    adresse: {type:String, default:'' },
     image: {type:String, default:'./public/maison1.jpg'},
     price: {type:Number, default:'250'},
     nbrChambres: {type:Number, default:'3'},
