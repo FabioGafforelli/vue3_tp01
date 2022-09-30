@@ -1,6 +1,6 @@
 <template>
 <h1>Page simple</h1>
-<card v-bind="objet"/>
+<Card v-bind="objet"/>
 </template>
 
 <script setup lang="ts">

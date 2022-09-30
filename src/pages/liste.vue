@@ -8,7 +8,7 @@
 <template>
     <div class="p-2">
         <h1 class="text-2xl">Page Liste</h1>
-        <Card v-for="maison in maisons" :key="maison.nom" v-bind="maison"/>
+        <Card v-for="maison in maisons" :key="maison.titre" v-bind="maison"/>
             <!--<card class="w-1/2" v-bind="maisons"/>-->
     </div>
-    </template>
+</template>
