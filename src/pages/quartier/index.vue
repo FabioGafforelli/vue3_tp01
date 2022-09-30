@@ -15,5 +15,22 @@ import { supabase } from "../../supabase";
             {{ quartierObject.libelle_Quartier }}
           </li>
         </ul>  -->
+        <Disclosure
+    v-for="(listeQuartier, libelle_commune) in groupBy(
+      data,
+      'libelle_commune'
+    )"
+    :key="libelle_commune"
+  >
+  <DisclosureButton>
+    {{libelle_commune}}
+  </DisclosureButton>
+  <DisclosurePannel>
+          <li v-for="quartierObject in (data as any[])">
+            {{ quartierObject.libelle_commune }} -
+            {{ quartierObject.libelle_quartier }}
+          </li>
+  </DisclosurePannel>
+  </Disclosure>
       </section>
     </template>
