@@ -1,7 +1,7 @@
 <template>
   <div class="p-2">
       <h1 class="text-2xl">Page Liste Supabase</h1>
-      <div v-for="maison in tableauDesMaisons" :key="maison.nomMaison">
+      <div v-for="maison in tableauDesMaisons" :key="maison.titre">
           <card class="w-1/2" v-bind="maison"/> 
           <RouterLink
   :to="{
@@ -26,5 +26,6 @@ let { data: tableauDesMaisons, error } = await supabase
 .select('*')
 
 console.log(tableauDesMaisons)
+
 
 </script>
