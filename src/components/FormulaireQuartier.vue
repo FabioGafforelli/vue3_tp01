@@ -13,7 +13,7 @@
         let { data, error } = await supabase
             .from("quartier")
             .select("*")
-            .eq("id", props.id);
+            .eq("code_quartier", props.id);
         if (error) console.log("n'a pas pu charger le table Maison :", error);
         else quartier.value = (data as any[])[0];
     }

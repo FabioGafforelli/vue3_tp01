@@ -31,7 +31,7 @@ import { supabase } from "../../supabase";
             <RouterLink
   :to="{
     name: 'quartier-id',
-    params: { id: quartierObject.libelle_quartier },
+    params: { id: quartierObject.code_quartier },
   }"
 >{{ quartierObject.libelle_quartier }}</RouterLink>
           </li>
