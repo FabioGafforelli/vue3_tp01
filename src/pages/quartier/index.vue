@@ -26,7 +26,7 @@ import { supabase } from "../../supabase";
     {{libelle_commune}}
   </DisclosureButton>
   <DisclosurePannel>
-          <li v-for="quartierObject in (data as any[])">
+          <li v-for="quartierObject in (listeQuartier as any[])">
             {{ quartierObject.libelle_commune }} -
             {{ quartierObject.libelle_quartier }}
           </li>
