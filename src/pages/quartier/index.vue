@@ -27,8 +27,13 @@ import { supabase } from "../../supabase";
   </DisclosureButton>
   <DisclosurePannel>
           <li v-for="quartierObject in (listeQuartier as any[])">
-            {{ quartierObject.libelle_commune }} -
-            {{ quartierObject.libelle_quartier }}
+
+            <RouterLink
+  :to="{
+    name: 'quartier-id',
+    params: { id: quartierObject.libelle_quartier },
+  }"
+>{{ quartierObject.libelle_quartier }}</RouterLink>
           </li>
   </DisclosurePannel>
   </Disclosure>
