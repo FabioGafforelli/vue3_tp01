@@ -18,14 +18,14 @@ if (props.id) {
  if (error) console.log("n'a pas pu charger le table Maison :", error);
  else maison.value = (data as any[])[0];
 }
-    async function upsertMaison(dataForm, node) {
- const { data, error } = await supabase.from("maison").upsert(dataForm);
- if (error) node.setErrors([error.message])
-else {
-        node.setErrors([]);
-        router.push({ name: "edit-id", params: { id: data[0].id } });
+async function upsertMaison(dataForm, node) {
+     const { data, error } = await supabase.from("maison").upsert(dataForm);
+     if (error) node.setErrors([error.message])
+    else {
+            node.setErrors([]);
+            router.push({ name: "edit-id", params: { id: data[0].id } });
+        }
     }
-}
 
 </script>
 <template>

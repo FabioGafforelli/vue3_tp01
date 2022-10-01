@@ -10,7 +10,7 @@ const props = defineProps<{ id: string }>();
     <template>
         <div>
      
-            <FormulaireOffreMaison :id="Number(id)" />
+            <FormulaireOffreMaison :id="id" />
         </div>
      
     </template>
