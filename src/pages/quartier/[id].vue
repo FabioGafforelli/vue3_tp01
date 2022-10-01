@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import {supabase} from "@/supabase"
-import FormulaireOffreMaison from "../../components/FormulaireOffreMaison.vue";
+import FormulaireQuartier from "../../components/FormulaireQuartier.vue"
     defineProps({
             id: String,
         })
@@ -11,7 +11,7 @@ import FormulaireOffreMaison from "../../components/FormulaireOffreMaison.vue";
     <template>
         <div>
      
-            <FormulaireOffreMaison :id="id" />
+            <FormulaireQuartier :id="id" />
         </div>
      
     </template>
