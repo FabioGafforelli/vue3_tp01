@@ -32,7 +32,7 @@
       <li>
         <router-link class="text-red-600 underline" to="/edit/new">
           lien vers
-          <code class="font-mono">le formulaire</code>
+          <code class="font-mono">le formulaire nouvelle maison</code>
         </router-link>
       </li>
       <li>
@@ -59,6 +59,12 @@
       <li>
         <router-link class="text-red-600 underline" to="/quartier">
           Quartier
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/quartier/new">
+          lien vers
+          <code class="font-mono">le formulaire nouveau quartier</code>
         </router-link>
       </li>
     </ul>
