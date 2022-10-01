@@ -74,6 +74,17 @@
         </router-link>
       </li>
       <li>
+        <router-link class="text-red-600 underline" to="/commune">
+          Commune
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/commune/new">
+          lien vers
+          <code class="font-mono">le formulaire nouvelle commune</code>
+        </router-link>
+      </li>
+      <li>
         <router-link class="text-red-600 underline" to="/commune/[id]">
           lien vers
           <code class="font-mono">le formulaire editer une commune</code>
