@@ -8,32 +8,24 @@ import { supabase } from "../../supabase";
     
     <template>
       <section class="flex flex-col">
-        <h3 class="text-2xl">Liste des quartiers</h3>
-      <!--ul>
-          <li v-for="quartierObject in (data as any[])">
-            {{ quartierObject.libelle_Commune }} -
-            {{ quartierObject.libelle_Quartier }}
-          </li>
-        </ul>  -->
+        <h3 class="text-2xl">Liste des Communes</h3>
         <Disclosure
-    v-for="(listeQuartier, libelle_commune) in groupBy(
+    v-for="(listeCommune, libelle_commune) in groupBy(
       data,
       'libelle_commune'
     )"
     :key="libelle_commune"
   >
-  <DisclosureButton>
-    {{libelle_commune}}
-  </DisclosureButton>
+
   <DisclosurePannel>
-          <li v-for="quartierObject in (listeQuartier as any[])">
+          <li v-for="communeObject in (listeCommune as any[])">
 
             <RouterLink
   :to="{
-    name: 'quartier-id',
-    params: { id: quartierObject.code_quartier },
+    name: 'commune-id',
+    params: { id: communeObject.code_commune },
   }"
->{{ quartierObject.libelle_quartier }}</RouterLink>
+>{{ communeObject.libelle_commune }}</RouterLink>
           </li>
   </DisclosurePannel>
   </Disclosure>
