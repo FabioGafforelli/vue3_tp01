@@ -67,6 +67,12 @@
           <code class="font-mono">le formulaire nouveau quartier</code>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/quartier/[id]">
+          lien vers
+          <code class="font-mono">le formulaire editer un quartier</code>
+        </router-link>
+      </li>
     </ul>
   </nav>
 
