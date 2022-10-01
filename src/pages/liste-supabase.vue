@@ -3,6 +3,12 @@
       <h1 class="text-2xl">Page Liste Supabase</h1>
       <div v-for="maison in tableauDesMaisons" :key="maison.nomMaison">
           <card class="w-1/2" v-bind="maison"/> 
+          <RouterLink
+  :to="{
+    name: 'edit-id',
+    params: { id: maison.id },
+  }"
+>{{ maison.titre }}</RouterLink>
       </div>
   </div>
 </template>
