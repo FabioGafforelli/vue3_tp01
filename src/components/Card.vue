@@ -29,6 +29,7 @@ import heart from "./icones/Heart.vue"
 
 defineProps({
     titre: {type:String, default:'Beverly Springifeld'},
+    lieu: {type:String, default:'Ville'},
     adresse: {type:String, default:'rue du test' },
     image: {type:String, default:'./public/maison1.jpg'},
     price: {type:Number, default:'123'},

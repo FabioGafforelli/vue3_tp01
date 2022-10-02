@@ -17,6 +17,15 @@ const optionsQuartier = listeQuartier?.map((quartier) => ({
   value: quartier.code_quartier,
   label: quartier.libelle_quartier,
 }));
+    const { data: listeCommune,  } = await supabase
+  .from("commune")
+  .select("*");
+if (error) console.log("n'a pas pu charger la table Quartier :", error);
+// Les convertir par `map` en un tableau d'objets {value, label} pour FormKit
+const optionsCommune = listeCommune?.map((commune) => ({
+  value: commune.libelle_commune,
+  label: commune.libelle_commune,
+}));
     const props = defineProps(["id"]);
 if (props.id) {
  // On charge les données de la maison
@@ -54,6 +63,7 @@ async function upsertMaison(dataForm, node) {
  }" v-model="maison">
             
            <FormKit name="titre" label="Nom" />
+           <FormKit type="select" name="lieu" label="Lieu" :options="optionsCommune" />             
            <FormKit name="adresse" label="Adresse" />
            <FormKit type="select" name="code_quartier" label="Quartier" :options="optionsQuartier" />             
            <FormKit name="surface" label="surface m²" />
