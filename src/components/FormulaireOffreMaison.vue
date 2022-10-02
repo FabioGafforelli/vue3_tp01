@@ -8,6 +8,15 @@ const router = useRouter();
     // ATTENTION : faire une Ref pas une Reactive car :
     // c'est l'objet qui doit être réactif, pas ses props
     const maison = ref({});
+    const { data: listeQuartier, error } = await supabase
+  .from("quartier")
+  .select("*");
+if (error) console.log("n'a pas pu charger la table Quartier :", error);
+// Les convertir par `map` en un tableau d'objets {value, label} pour FormKit
+const optionsQuartier = listeQuartier?.map((quartier) => ({
+  value: quartier.code_quartier,
+  label: quartier.libelle_quartier,
+}));
     const props = defineProps(["id"]);
 if (props.id) {
  // On charge les données de la maison
@@ -46,6 +55,7 @@ async function upsertMaison(dataForm, node) {
             
            <FormKit name="titre" label="Nom" />
            <FormKit name="adresse" label="Adresse" />
+           <FormKit type="select" name="code_quartier" label="Quartier" :options="optionsQuartier" />             
            <FormKit name="surface" label="surface m²" />
            <FormKit name="price" label="Prix" type="number" />
            <FormKit name="nbrSDB" label="Nombre de salle de bain" type="number" />
