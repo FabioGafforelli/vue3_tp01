@@ -7,6 +7,15 @@
         // ATTENTION : faire une Ref pas une Reactive car :
         // c'est l'objet qui doit être réactif, pas ses props
         const quartier = ref({});
+        const { data: listeCommune, error } = await supabase
+  .from("commune")
+  .select("*");
+if (error) console.log("n'a pas pu charger la table Commune :", error);
+// Les convertir par `map` en un tableau d'objets {value, label} pour FormKit
+const optionsCommune = listeCommune?.map((commune) => ({
+  value: commune.code_commune,
+  label: commune.libelle_commune,
+}));
         const props = defineProps(["id"]);
     if (props.id) {
         // On charge les données de la maison
@@ -38,8 +47,7 @@
      }" v-model="quartier">
                 
                <FormKit name="libelle_quartier" label="Nom du quartier" />
-
-             
+               <FormKit type="select" name="code_commune" label="Commune" :options="optionsCommune" />             
             </FormKit>
          </div>
     </template>
